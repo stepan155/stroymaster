@@ -1,0 +1,356 @@
+/* 1. Обнуление отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1a1a2e;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ======= ШАПКА ======= */
+header {
+  background-color: #2c3e50; /* тёмно-синий */
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e67e22; /* оранжевый акцент */
+}
+
+/* ======= ГЕРОЙ ======= */
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2c3e50 100%);
+  color: #ffffff;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #b0b0c0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #e67e22; /* оранжевый */
+  color: #ffffff;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #d35400; /* тёмно-оранжевый */
+  transform: scale(1.05);
+}
+
+/* ======= О НАС ======= */
+.about {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #1a1a2e;
+}
+
+.about-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.about-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.about-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* ======= УСЛУГИ ======= */
+.services {
+  padding: 80px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.services-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: #f8f9fa;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.service-card p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e67e22; /* оранжевый */
+  margin-bottom: 15px;
+}
+
+.btn-small {
+  display: inline-block;
+  background-color: #2c3e50; /* тёмно-синий */
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-small:hover {
+  background-color: #e67e22; /* оранжевый при наведении */
+  transform: scale(1.05);
+}
+.projects {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projects-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.projects-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.projects-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.projects-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.projects-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* ======= АДАПТИВНОСТЬ ======= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 17px;
+  }
+  .about-card,
+  .service-card {
+    width: 100%;
+    max-width: 350px;
+  }
+  header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* ======= НАШИ ПРОЕКТЫ ======= */
+.projects {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.project-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
