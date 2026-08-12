@@ -1,0 +1,512 @@
+/* 1. Обнуление отступов */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1a1a2e;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ======= ШАПКА ======= */
+header {
+  background-color: #2c3e50; /* тёмно-синий */
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #e67e22; /* оранжевый акцент */
+}
+
+/* ======= ГЕРОЙ ======= */
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2c3e50 100%);
+  color: #ffffff;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #b0b0c0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #e67e22; /* оранжевый */
+  color: #ffffff;
+  padding: 15px 35px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #d35400; /* тёмно-оранжевый */
+  transform: scale(1.05);
+}
+
+/* ======= О НАС ======= */
+.about {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #1a1a2e;
+}
+
+.about-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.about-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.about-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* ======= УСЛУГИ ======= */
+.services {
+  padding: 80px 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.services-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background-color: #f8f9fa;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.service-card p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e67e22; /* оранжевый */
+  margin-bottom: 15px;
+}
+
+.btn-small {
+  display: inline-block;
+  background-color: #2c3e50; /* тёмно-синий */
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-small:hover {
+  background-color: #e67e22; /* оранжевый при наведении */
+  transform: scale(1.05);
+}
+.projects {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.projects-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.projects-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.projects-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.projects-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.projects-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* ======= АДАПТИВНОСТЬ ======= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 17px;
+  }
+  .about-card,
+  .service-card {
+    width: 100%;
+    max-width: 350px;
+  }
+  header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* ======= НАШИ ПРОЕКТЫ ======= */
+.projects {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.projects-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: #ffffff;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.project-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1a1a2e;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+.form-section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #e67e22;
+  outline: none;
+}
+
+#formMessage {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 16px;
+  }
+  .about-grid,
+  .services-grid,
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-card,
+  .service-card,
+  .project-card {
+    width: 90%;
+    max-width: 350px;
+  }
+  form {
+    width: 90%;
+  }
+  input {
+    width: 100%;
+  }
+}
+.about,
+.services,
+.projects,
+.form-section {
+  opacity: 0;
+  transform: translateY(40px);    /* ✅ Без пробела */
+  transition: opacity 1.8s ease, transform 1.8s ease;
+}
+.about.visible,
+.services.visible,
+.projects.visible,
+.form-section.visible {           /* ✅ Добавил .form-section.visible, чтобы форма тоже появлялась */
+  opacity: 1;
+  transform: translateY(0);       /* ✅ Без пробела */
+}
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e67e22;
+  color: #ffffff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  z-index: 1000;
+}
+.back-to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background-color: #d35400;
+  transform: scale(1.1);
+}
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12 px;
+  margin-bottom: 15 px;
+}
+.project-card {
+  background-color: #ffffff;
+  padding: 20px; /* Внутренние отступы */
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  width: 260px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* ← ЭТО ГЛАВНОЕ: обрезает всё, что выходит за границы */
+}
+
+.project-img {
+  width: 100%;
+  height: 180px;          /* Фиксированная высота */
+  object-fit: cover;      /* Обрезает фото, сохраняя пропорции */
+  border-radius: 12px;    /* Скругление углов */
+  margin-bottom: 15px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal.show {
+  display: flex;
+}
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+}
