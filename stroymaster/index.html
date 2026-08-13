@@ -157,6 +157,20 @@
 </section>
 </main>
 <script>
+  function validateFormData(name, phone) {
+    const cleanName = name.trim();
+    const cleanPhone = phone.trim();
+    if (cleanName === '' || cleanPhone === '') {
+      return { success: false, message: '❌ Заполните все поля!' };
+    }
+    if (cleanName.length < 2) {
+      return { success: false, message: '❌ Имя должно содержать хотя бы 2 символа' };
+    }
+    if (!/^\d+$/.test(cleanPhone)) {
+      return { success: false, message: '❌ Телефон должен содержать только цифры' };
+    }
+    return { success: true, message: '✅ Спасибо! Мы свяжемся с вами.' };
+  }
   const form = document.getElementById('orderForm');
   const messageBlock = document.getElementById('formMessage');
 
@@ -164,18 +178,12 @@
     form.addEventListener('submit', function (event) {
       event.preventDefault();
 
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-
-      if (name === '' || phone === '') {
-        messageBlock.textContent = '❌ Заполните все поля!';
-        messageBlock.style.color = 'red';
-      } else if (phone.length < 10) {
-        messageBlock.textContent = '❌ Введите корректный номер (не менее 10 цифр)';
-        messageBlock.style.color = 'red';
-      } else {
-        messageBlock.textContent = '✅ Спасибо! Мы свяжемся с вами.';
-        messageBlock.style.color = 'green';
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const result = validateFormData(name, phone);
+      messageBlock.textContent = result.message;
+      messageBlock.style.color = result.success ? 'green' : 'red';
+      if (result.success) {
         document.getElementById('name').value = '';
         document.getElementById('phone').value = '';
       }
@@ -229,7 +237,19 @@
 </div>
 </div>
 <script>
-  const modal = document.getElementById('modal');
+  const modalForm = document.getElementById('modalForm');
+  constmodalMessage = document.getElementById('modalMessage');
+  modalForm.addEventListener ('submit',function (event) {event.preventDefault();
+    const name = document.getElementById('modalName').value;
+    const phone = document.getElementById ('modalPhone').value;
+    const result = validateFormData (name, phone);
+    modalMessage.textContent = result.message;
+    modalMessage.style.color = result.success ? 'green' : 'red';
+    if (result.success) {
+      document.getElementById('modalName').value = '';
+      document.getElementById('modalPhone').value = '';
+    }
+  });
   const closeBtn = document.querySelector('.close-modal');
   const orderBtns = document.querySelectorAll('.btn, .btn-small');
 
