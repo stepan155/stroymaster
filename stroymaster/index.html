@@ -141,6 +141,11 @@
 </section>
 <section class="form-section">
   <div class ="container">
+    <div class="social-links">
+      <a href="#">Telegram</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Youtube</a>
+    </div>
     <h2 class="section-title">Оставьте заявку</h2>
     <form id="orderForm">
       <input type="text" id="name" placeholder="Ваше имя" required />
@@ -242,6 +247,17 @@
   modal.addEventListener('click', function(e) {
     if (e.target === modal) modal.classList.remove('show');
   });
+</script>
+<footer class="footer">
+  <div class="container">
+    <p>© <span id="year" ></span> СтройМастер. Все права защищены.</p>
+    <p>Сделано с ❤️ для вас</p>
+  </div>
+</footer>
+<script>
+  const yearSpan = document.getElementById ('year');
+  const currentYear = new Date ().getFullYear();
+  yearSpan.textContent = currentYear;
 </script>
 </body>
 </html>
