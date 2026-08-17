@@ -20,6 +20,7 @@
           <li><a href="#contact">Контакты</a></li>
         </ul>
       </nav>
+      <button id="themeToggle" class="theme-toggle">🌙 Тёмная тема</button>
     </div>
   </header>
 
@@ -35,7 +36,7 @@
       </div>
     </section>
 
-    <!-- О НАС (ПРЕИМУЩЕСТВА) -->
+    <!-- О НАС -->
     <section id="about" class="about">
       <div class="container">
         <h2 class="section-title">Почему мы?</h2>
@@ -63,221 +64,372 @@
     <section id="services" class="services">
       <div class="container">
         <h2 class="section-title">Наши услуги</h2>
-        <div class="services-grid">
-          <!-- 1 -->
-          <div class="service-card">
-            <div class="service-icon">🧱</div>
-            <h3>Кирпичная кладка</h3>
-            <p>Возведение стен любой сложности из кирпича, блоков, газобетона.</p>
-            <span class="price">от 2 500 ₽/м²</span>
-            <a href="#contact" class="btn-small">Заказать</a>
+        <div class="services-grid"></div>
+      </div>
+    </section>
+
+    <!-- ПРОЕКТЫ -->
+    <section class="projects">
+      <div class="container">
+        <h2 class="section-title">Наши проекты</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&h=400&fit=crop" alt="Деревянный дом" class="project-img" />
+            <h3>Деревянный дом</h3>
+            <p>Дом, построенный полностью из дерева</p>
+            <span class="price">1 500 000 ₽</span>
+            <a href="#" class="btn-small">Заказать под ключ</a>
           </div>
-          <!-- 2 -->
-          <div class="service-card">
-            <div class="service-icon">🪚</div>
-            <h3>Кровельные работы</h3>
-            <p>Монтаж металлочерепицы, мягкой кровли, профнастила, водостоков.</p>
-            <span class="price">от 1 800 ₽/м²</span>
-            <a href="#contact" class="btn-small">Заказать</a>
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop" alt="Кирпичный дом" class="project-img" />
+            <h3>Кирпичный дом</h3>
+            <p>Дом, построенный полностью из кирпича</p>
+            <span class="price">2 500 000 ₽</span>
+            <a href="#" class="btn-small">Заказать под ключ</a>
           </div>
-          <!-- 3 -->
-          <div class="service-card">
-            <div class="service-icon">🖌️</div>
-            <h3>Внутренняя отделка</h3>
-            <p>Штукатурка, шпаклёвка, покраска, обои, наливные полы, плитка.</p>
-            <span class="price">от 1 200 ₽/м²</span>
-            <a href="#contact" class="btn-small">Заказать</a>
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop" alt="Дом с баней" class="project-img" />
+            <h3>Дом с баней</h3>
+            <p>Дачный комплект дом с отдельной баней</p>
+            <span class="price">4 500 000 ₽</span>
+            <a href="#" class="btn-small">Заказать под ключ</a>
           </div>
-          <!-- 4 -->
-          <div class="service-card">
-            <div class="service-icon">📐</div>
-            <h3>Дизайн-проект</h3>
-            <p>Разработка планировок, 3D-визуализация, подбор материалов.</p>
-            <span class="price">от 5 000 ₽</span>
-            <a href="#contact" class="btn-small">Заказать</a>
+          <div class="project-card">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop" alt="Баня" class="project-img" />
+            <h3>Баня</h3>
+            <p>Для любителей потеплее</p>
+            <span class="price">1 500 000 ₽</span>
+            <a href="#" class="btn-small">Заказать под ключ</a>
           </div>
         </div>
       </div>
     </section>
-    <section class="projects">
-  <div class="container">
-    <h2 class="section-title">Наши проекты</h2>
-    <div class="projects-grid">
 
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&h=400&fit=crop" alt="Деревянный дом" class="project-img" />
-        <h3>Деревянный дом</h3>
-        <p>Дом, построенный полностью из дерева</p>
-        <span class="price">1 500 000 ₽</span>
-        <a href="#" class="btn-small">Заказать под ключ</a>
+    <!-- ФОРМА СВЯЗИ + ДОБАВЛЕНИЕ УСЛУГИ -->
+    <section class="form-section">
+      <div class="container">
+        <div class="social-links">
+          <a href="#">Telegram</a> |
+          <a href="#">Instagram</a> |
+          <a href="#">Youtube</a>
+        </div>
+        <h2 class="section-title">Оставьте заявку</h2>
+        <form id="orderForm">
+          <input type="text" id="name" placeholder="Ваше имя" required />
+          <input type="tel" id="phone" placeholder="Телефон" required />
+          <button type="submit" class="btn">Отправить</button>
+        </form>
+        <div id="formMessage"></div>
+
+        <!-- ФОРМА ДОБАВЛЕНИЯ УСЛУГИ -->
+        <div style="margin-top: 40px; border-top: 1px solid #ccc; padding-top: 30px;">
+          <h3>➕ Добавить новую услугу</h3>
+          <form id="addServiceForm">
+            <input type="text" id="newServiceIcon" placeholder="Иконка (например, 🛠️)" />
+            <input type="text" id="newServiceTitle" placeholder="Название услуги" />
+            <input type="text" id="newServiceDesc" placeholder="Описание" />
+            <input type="text" id="newServicePrice" placeholder="Цена (например, от 3 000 ₽)" />
+            <button type="submit" class="btn">Добавить услугу</button>
+          </form>
+        </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop" alt="Кирпичный дом" class="project-img" />
-        <h3>Кирпичный дом</h3>
-        <p>Дом, построенный полностью из кирпича</p>
-        <span class="price">2 500 000 ₽</span>
-        <a href="#" class="btn-small">Заказать под ключ</a>
-      </div>
+  </main>
 
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&h=400&fit=crop" alt="Дом с баней" class="project-img" />
-        <h3>Дом с баней</h3>
-        <p>Дачный комплект дом с отдельной баней</p>
-        <span class="price">4 500 000 ₽</span>
-        <a href="#" class="btn-small">Заказать под ключ</a>
-      </div>
+  <!-- КНОПКА НАВЕРХ -->
+  <button id="backToTop" class="back-to-top" title="Наверх">⬆</button>
 
-      <div class="project-card">
-        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop" alt="Баня" class="project-img" />
-        <h3>Баня</h3>
-        <p>Для любителей потеплее</p>
-        <span class="price">1 500 000 ₽</span>
-        <a href="#" class="btn-small">Заказать под ключ</a>
-      </div>
-
+  <!-- МОДАЛЬНОЕ ОКНО (основное) -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Оставьте заявку</h2>
+      <form id="modalForm">
+        <input type="text" id="modalName" placeholder="Ваше имя" required />
+        <input type="tel" id="modalPhone" placeholder="Телефон" required />
+        <button type="submit" class="btn">Отправить</button>
+      </form>
+      <div id="modalMessage"></div>
     </div>
   </div>
-</section>
-<section class="form-section">
-  <div class ="container">
-    <div class="social-links">
-      <a href="#">Telegram</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">Youtube</a>
-    </div>
-    <h2 class="section-title">Оставьте заявку</h2>
-    <form id="orderForm">
-      <input type="text" id="name" placeholder="Ваше имя" required />
-      <input type="tel" id="phone" placeholder="Телефон" required />
-      <button type="submit" class="btn">Отправить</button>
-    </form>
-<div id="formMessage"></div>
-</div>
-</section>
-</main>
-<script>
-  function validateFormData(name, phone) {
-    const cleanName = name.trim();
-    const cleanPhone = phone.trim();
-    if (cleanName === '' || cleanPhone === '') {
-      return { success: false, message: '❌ Заполните все поля!' };
-    }
-    if (cleanName.length < 2) {
-      return { success: false, message: '❌ Имя должно содержать хотя бы 2 символа' };
-    }
-    if (!/^\d+$/.test(cleanPhone)) {
-      return { success: false, message: '❌ Телефон должен содержать только цифры' };
-    }
-    return { success: true, message: '✅ Спасибо! Мы свяжемся с вами.' };
-  }
-  const form = document.getElementById('orderForm');
-  const messageBlock = document.getElementById('formMessage');
 
-  if (form && messageBlock) {
-    form.addEventListener('submit', function (event) {
+  <!-- МОДАЛЬНОЕ ОКНО РЕДАКТИРОВАНИЯ УСЛУГИ -->
+  <div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close-edit-modal">&times;</span>
+      <h2>Редактировать услугу</h2>
+      <form id="editServiceForm">
+        <input type="text" id="editIcon" placeholder="Иконка" />
+        <input type="text" id="editTitle" placeholder="Название" />
+        <input type="text" id="editDesc" placeholder="Описание" />
+        <input type="text" id="editPrice" placeholder="Цена" />
+        <input type="hidden" id="editIndex" value="" />
+        <button type="submit" class="btn">Сохранить</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> СтройМастер. Все права защищены.</p>
+      <p>Сделано с ❤️ для вас</p>
+    </div>
+  </footer>
+
+  <!-- СКРИПТЫ -->
+  <script>
+    // === ВАЛИДАЦИЯ ===
+    function validateFormData(name, phone) {
+      const cleanName = name.trim();
+      const cleanPhone = phone.trim();
+      if (cleanName === '' || cleanPhone === '') {
+        return { success: false, message: '❌ Заполните все поля!' };
+      }
+      if (cleanName.length < 2) {
+        return { success: false, message: '❌ Имя должно содержать хотя бы 2 символа' };
+      }
+      if (!/^\d+$/.test(cleanPhone)) {
+        return { success: false, message: '❌ Телефон должен содержать только цифры' };
+      }
+      if (cleanPhone.length < 10) {
+        return { success: false, message: '❌ Введите корректный номер (не менее 10 цифр)' };
+      }
+      return { success: true, message: '✅ Спасибо! Мы свяжемся с вами.' };
+    }
+
+    // === ОСНОВНАЯ ФОРМА ===
+    const form = document.getElementById('orderForm');
+    const messageBlock = document.getElementById('formMessage');
+    if (form && messageBlock) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const result = validateFormData(name, phone);
+        messageBlock.textContent = result.message;
+        messageBlock.style.color = result.success ? 'green' : 'red';
+        if (result.success) {
+          document.getElementById('name').value = '';
+          document.getElementById('phone').value = '';
+        }
+      });
+    }
+
+    // === АНИМАЦИЯ ПОЯВЛЕНИЯ СЕКЦИЙ ===
+    const sections = document.querySelectorAll('.about, .services, .projects, .form-section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+
+    // === КНОПКА "НАВЕРХ" ===
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 500) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+    backToTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // === МОДАЛЬНОЕ ОКНО (основное) ===
+    const modal = document.getElementById('modal');
+    const modalForm = document.getElementById('modalForm');
+    const modalMessage = document.getElementById('modalMessage');
+    const closeBtn = document.querySelector('.close-modal');
+
+    const orderBtns = document.querySelectorAll('.btn, .btn-small');
+    orderBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.add('show');
+      });
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        modal.classList.remove('show');
+      });
+    }
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+      }
+    });
+
+    modalForm.addEventListener('submit', function(event) {
       event.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
+      const name = document.getElementById('modalName').value;
+      const phone = document.getElementById('modalPhone').value;
       const result = validateFormData(name, phone);
-      messageBlock.textContent = result.message;
-      messageBlock.style.color = result.success ? 'green' : 'red';
+      modalMessage.textContent = result.message;
+      modalMessage.style.color = result.success ? 'green' : 'red';
       if (result.success) {
-        document.getElementById('name').value = '';
-        document.getElementById('phone').value = '';
+        document.getElementById('modalName').value = '';
+        document.getElementById('modalPhone').value = '';
       }
     });
-  }
-</script>
-<script>
-  console.log('Скрипт анимации загружен');
-  const sections = document.querySelectorAll('.about, .services, .projects, .form-section');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
-  sections.forEach(section => observer.observe(section));
-</script>
-<button id="backToTop" class="back-to-top" title="Наверх">⬆</button>
-<script>
-  const backToTopBtn = document.getElementById('backToTop');
 
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 500) {
-      backToTopBtn.classList.add('show');
+    // === УПРАВЛЕНИЕ УСЛУГАМИ (CRUD) ===
+
+    // Данные (загрузка из localStorage или начальный массив)
+    let servicesData = [];
+    const savedServices = localStorage.getItem('services');
+    if (savedServices) {
+      servicesData = JSON.parse(savedServices);
     } else {
-      backToTopBtn.classList.remove('show');
+      servicesData = [
+        { icon: '🧱', title: 'Кирпичная кладка', description: 'Возведение стен любой сложности из кирпича, блоков, газобетона.', price: 'от 2 500 ₽/м²' },
+        { icon: '🪚', title: 'Кровельные работы', description: 'Монтаж металлочерепицы, мягкой кровли, профнастила, водостоков.', price: 'от 1 800 ₽/м²' },
+        { icon: '📐', title: 'Дизайн-проект', description: 'Разработка планировок, 3D-визуализация, подбор материалов.', price: 'от 5 000 ₽' }
+      ];
+      localStorage.setItem('services', JSON.stringify(servicesData));
     }
-  });
 
-  backToTopBtn.addEventListener('click', function () {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+    // Рендер услуг
+    function renderServices() {
+      const container = document.querySelector('.services-grid');
+      if (!container) return;
+
+      container.innerHTML = '';
+
+      servicesData.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.className = 'service-card';
+
+        card.innerHTML = `
+          <div class="service-icon">${item.icon}</div>
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+          <span class="price">${item.price}</span>
+          <a href="#contact" class="btn-small">Заказать</a>
+          <button class="edit-service" data-index="${index}">✏️</button>
+          <button class="delete-service" data-index="${index}">🗑️</button>
+        `;
+
+        container.appendChild(card);
+      });
+
+      // Обработчики удаления
+      document.querySelectorAll('.delete-service').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const index = parseInt(this.dataset.index);
+          servicesData.splice(index, 1);
+          localStorage.setItem('services', JSON.stringify(servicesData));
+          renderServices();
+        });
+      });
+
+      // Обработчики редактирования
+      document.querySelectorAll('.edit-service').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const index = parseInt(this.dataset.index);
+          openEditModal(index);
+        });
+      });
+    }
+
+    // Открытие модалки редактирования
+    function openEditModal(index) {
+      const item = servicesData[index];
+      document.getElementById('editIcon').value = item.icon || '';
+      document.getElementById('editTitle').value = item.title || '';
+      document.getElementById('editDesc').value = item.description || '';
+      document.getElementById('editPrice').value = item.price || '';
+      document.getElementById('editIndex').value = index;
+      document.getElementById('editModal').classList.add('show');
+    }
+
+    // Закрытие модалки редактирования
+    document.querySelector('.close-edit-modal').addEventListener('click', function() {
+      document.getElementById('editModal').classList.remove('show');
     });
-  });
-</script>
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <h2>Оставьте заявку</h2>
-    <form id="modalForm">
-      <input type="text" id="modalName" placeholder="Ваше имя" required />
-      <input type="tel" id="modalPhone" placeholder="Телефон" required />
-      <button type="submit" class="btn">Отправить</button>
-    </form>
-    <div id="modalMessage"></div>
-  </div>
-</div>
-</div>
-<script>
-  const modalForm = document.getElementById('modalForm');
-  constmodalMessage = document.getElementById('modalMessage');
-  modalForm.addEventListener ('submit',function (event) {event.preventDefault();
-    const name = document.getElementById('modalName').value;
-    const phone = document.getElementById ('modalPhone').value;
-    const result = validateFormData (name, phone);
-    modalMessage.textContent = result.message;
-    modalMessage.style.color = result.success ? 'green' : 'red';
-    if (result.success) {
-      document.getElementById('modalName').value = '';
-      document.getElementById('modalPhone').value = '';
-    }
-  });
-  const closeBtn = document.querySelector('.close-modal');
-  const orderBtns = document.querySelectorAll('.btn, .btn-small');
 
-  orderBtns.forEach(btn => {
-    btn.addEventListener('click', function(e) {
+    document.getElementById('editModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.classList.remove('show');
+      }
+    });
+
+    // Сохранение изменений при редактировании
+    document.getElementById('editServiceForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      modal.classList.add('show');
+
+      const index = parseInt(document.getElementById('editIndex').value);
+      const icon = document.getElementById('editIcon').value.trim() || '🔧';
+      const title = document.getElementById('editTitle').value.trim();
+      const description = document.getElementById('editDesc').value.trim();
+      const price = document.getElementById('editPrice').value.trim();
+
+      if (!title || !description || !price) {
+        alert('Пожалуйста, заполните все поля!');
+        return;
+      }
+
+      servicesData[index] = { icon, title, description, price };
+      localStorage.setItem('services', JSON.stringify(servicesData));
+      document.getElementById('editModal').classList.remove('show');
+      renderServices();
     });
-  });
 
-  closeBtn.addEventListener('click', function() {
-    modal.classList.remove('show');
-  });
+    // Добавление новой услуги
+    const addForm = document.getElementById('addServiceForm');
+    if (addForm) {
+      addForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const icon = document.getElementById('newServiceIcon').value.trim() || '🔧';
+        const title = document.getElementById('newServiceTitle').value.trim();
+        const description = document.getElementById('newServiceDesc').value.trim();
+        const price = document.getElementById('newServicePrice').value.trim();
 
-  modal.addEventListener('click', function(e) {
-    if (e.target === modal) modal.classList.remove('show');
-  });
-</script>
-<footer class="footer">
-  <div class="container">
-    <p>© <span id="year" ></span> СтройМастер. Все права защищены.</p>
-    <p>Сделано с ❤️ для вас</p>
-  </div>
-</footer>
-<script>
-  const yearSpan = document.getElementById ('year');
-  const currentYear = new Date ().getFullYear();
-  yearSpan.textContent = currentYear;
-</script>
+        if (!title || !description || !price) {
+          alert('Пожалуйста, заполните все поля!');
+          return;
+        }
+
+        servicesData.push({ icon, title, description, price });
+        localStorage.setItem('services', JSON.stringify(servicesData));
+        renderServices();
+
+        // Очистка полей
+        document.getElementById('newServiceIcon').value = '';
+        document.getElementById('newServiceTitle').value = '';
+        document.getElementById('newServiceDesc').value = '';
+        document.getElementById('newServicePrice').value = '';
+      });
+    }
+
+    // Запуск рендера услуг
+    renderServices();
+
+    // === ТЁМНАЯ ТЕМА ===
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', function() {
+      document.body.classList.toggle('dark-theme');
+      if (document.body.classList.contains('dark-theme')) {
+        toggleBtn.textContent = '☀️ Светлая тема';
+      } else {
+        toggleBtn.textContent = '🌙 Тёмная тема';
+      }
+    });
+
+    // === АВТОМАТИЧЕСКИЙ ГОД ===
+    const yearSpan = document.getElementById('year');
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+
+    console.log('✅ Все скрипты загружены и работают!');
+  </script>
+
 </body>
 </html>

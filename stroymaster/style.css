@@ -21,7 +21,7 @@ body {
 
 /* ======= ШАПКА ======= */
 header {
-  background-color: #2c3e50; /* тёмно-синий */
+  background-color: #2c3e50;
   color: #ffffff;
   padding: 20px 0;
 }
@@ -52,7 +52,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #e67e22; /* оранжевый акцент */
+  color: #e67e22;
 }
 
 /* ======= ГЕРОЙ ======= */
@@ -83,7 +83,7 @@ nav ul li a:hover {
 
 .btn {
   display: inline-block;
-  background-color: #e67e22; /* оранжевый */
+  background-color: #e67e22;
   color: #ffffff;
   padding: 15px 35px;
   border-radius: 50px;
@@ -93,7 +93,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-  background-color: #d35400; /* тёмно-оранжевый */
+  background-color: #d35400;
   transform: scale(1.05);
 }
 
@@ -204,13 +204,13 @@ nav ul li a:hover {
 .price {
   font-size: 20px;
   font-weight: 700;
-  color: #e67e22; /* оранжевый */
+  color: #e67e22;
   margin-bottom: 15px;
 }
 
 .btn-small {
   display: inline-block;
-  background-color: #2c3e50; /* тёмно-синий */
+  background-color: #2c3e50;
   color: #ffffff;
   padding: 10px 25px;
   border-radius: 50px;
@@ -221,87 +221,11 @@ nav ul li a:hover {
 }
 
 .btn-small:hover {
-  background-color: #e67e22; /* оранжевый при наведении */
+  background-color: #e67e22;
   transform: scale(1.05);
 }
-.projects {
-  padding: 80px 0;
-  background-color: #f8f9fa;
-}
 
-.projects-grid {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.projects-card {
-  background-color: #ffffff;
-  padding: 25px 20px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  width: 260px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-.projects-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.projects-icon {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.projects-card h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #1a1a2e;
-}
-
-.projects-card p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-@media (max-width: 768px) {
-  .project-card {
-    width: 100%;
-    max-width: 350px;
-  }
-}
-
-/* ======= АДАПТИВНОСТЬ ======= */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-  .hero p {
-    font-size: 17px;
-  }
-  .about-card,
-  .service-card {
-    width: 100%;
-    max-width: 350px;
-  }
-  header .container {
-    flex-direction: column;
-    gap: 15px;
-  }
-  nav ul {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-/* ======= НАШИ ПРОЕКТЫ ======= */
+/* ======= ПРОЕКТЫ ======= */
 .projects {
   padding: 80px 0;
   background-color: #f8f9fa;
@@ -325,6 +249,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .project-card:hover {
@@ -349,12 +274,22 @@ nav ul li a:hover {
   margin-bottom: 15px;
 }
 
+.project-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
 @media (max-width: 768px) {
   .project-card {
     width: 100%;
     max-width: 350px;
   }
 }
+
+/* ======= ФОРМА ======= */
 .form-section {
   padding: 60px 0;
   background-color: #f8f9fa;
@@ -386,9 +321,13 @@ input:focus {
   font-weight: 600;
 }
 
+/* ======= АДАПТИВНОСТЬ ======= */
 @media (max-width: 600px) {
   .hero h1 {
-    font-size: 16px;
+    font-size: 28px;
+  }
+  .hero p {
+    font-size: 17px;
   }
   .about-grid,
   .services-grid,
@@ -408,22 +347,36 @@ input:focus {
   input {
     width: 100%;
   }
+  header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
+
+/* ======= АНИМАЦИЯ ======= */
 .about,
 .services,
 .projects,
 .form-section {
   opacity: 0;
-  transform: translateY(40px);    /* ✅ Без пробела */
+  transform: translateY(40px);
   transition: opacity 1.8s ease, transform 1.8s ease;
 }
+
 .about.visible,
 .services.visible,
 .projects.visible,
-.form-section.visible {           /* ✅ Добавил .form-section.visible, чтобы форма тоже появлялась */
+.form-section.visible {
   opacity: 1;
-  transform: translateY(0);       /* ✅ Без пробела */
+  transform: translateY(0);
 }
+
+/* ======= КНОПКА НАВЕРХ ======= */
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -443,43 +396,19 @@ input:focus {
   pointer-events: none;
   z-index: 1000;
 }
+
 .back-to-top.show {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
+
 .back-to-top:hover {
   background-color: #d35400;
   transform: scale(1.1);
 }
-.project-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12 px;
-  margin-bottom: 15 px;
-}
-.project-card {
-  background-color: #ffffff;
-  padding: 20px; /* Внутренние отступы */
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  width: 260px;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden; /* ← ЭТО ГЛАВНОЕ: обрезает всё, что выходит за границы */
-}
 
-.project-img {
-  width: 100%;
-  height: 180px;          /* Фиксированная высота */
-  object-fit: cover;      /* Обрезает фото, сохраняя пропорции */
-  border-radius: 12px;    /* Скругление углов */
-  margin-bottom: 15px;
-}
+/* ======= МОДАЛКА ======= */
 .modal {
   display: none;
   position: fixed;
@@ -492,9 +421,11 @@ input:focus {
   align-items: center;
   z-index: 1000;
 }
+
 .modal.show {
   display: flex;
 }
+
 .modal-content {
   background: white;
   padding: 30px;
@@ -503,13 +434,21 @@ input:focus {
   width: 90%;
   position: relative;
 }
+
 .close-modal {
   position: absolute;
   top: 10px;
   right: 15px;
   font-size: 28px;
   cursor: pointer;
+  color: #555;
 }
+
+.close-modal:hover {
+  color: #000;
+}
+
+/* ======= ФУТЕР ======= */
 .footer {
   background-color: #2c3e50;
   color: #ffffff;
@@ -517,14 +456,97 @@ input:focus {
   text-align: center;
   margin-top: 0;
 }
+
 .footer p {
   margin: 5px 0;
 }
-.socia-links a {
+
+.social-links a {
   color: #e67e22;
   text-decoration: none;
   margin: 0 10px;
 }
+
 .social-links a:hover {
   color: #ffffff;
+}
+.theme-toggle {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 6px 14 px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.theme-toggle:hover {
+  background: #fff;
+  color: #1a1a2e;
+}
+/* ТЁМНАЯ ТЕМА */
+body.dark-theme {
+  background-color: #1a1a2e !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme header {
+  background-color: #0d0d1a !important;
+}
+
+body.dark-theme .hero {
+  background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 100%) !important;
+}
+
+body.dark-theme .about,
+body.dark-theme .services,
+body.dark-theme .projects,
+body.dark-theme .form-section {
+  background-color: #2a2a3e !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme .about-card,
+body.dark-theme .service-card,
+body.dark-theme .project-card {
+  background-color: #3a3a4e !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
+}
+
+body.dark-theme .price {
+  color: #f39c12 !important;
+}
+
+body.dark-theme .btn,
+body.dark-theme .btn-small {
+  background-color: #f39c12 !important;
+}
+
+body.dark-theme .btn:hover,
+body.dark-theme .btn-small:hover {
+  background-color: #e67e22 !important;
+}
+
+body.dark-theme .footer {
+  background-color: #0d0d1a !important;
+}
+
+body.dark-theme .social-links a {
+  color: #f39c12 !important;
+}
+
+body.dark-theme .modal-content {
+  background-color: #2a2a3e !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme .close-modal {
+  color: #ffffff !important;
+}
+
+body.dark-theme input {
+  background-color: #3a3a4e !important;
+  color: #ffffff !important;
+  border-color: #555 !important;
 }
